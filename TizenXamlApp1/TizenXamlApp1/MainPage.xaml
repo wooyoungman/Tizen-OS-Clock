@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="TizenXamlApp1.MainPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                BackgroundColor="#51517A" Opacity="0.7">
+                <!--오늘의 추천 곡-->
+                <Image Source="newjeans_song.png"
+                       WidthRequest="100" HeightRequest="60"
+                       HorizontalOptions="Start" VerticalOptions="Start"/>
+                <Label x:Name="Reccomand_title" AbsoluteLayout.LayoutBounds="1600,70,250,100" 
+                        Text="오늘의 추천 곡 : " TextColor="LightCoral" FontSize="30" FontFamily="EliceFont" FontAttributes="Bold"
+                        Opacity="0.5"
+                        HorizontalOptions="Center" VerticalOptions="Center">
+                </Label>
+                <Label x:Name="singer_song_name" Text="---------This will be filled Data---------" 
+                             TextColor="LightGray" FontSize="35" FontFamily="EliceFont" FontAttributes="Bold"
+                             Opacity="0.5" HorizontalOptions="Center" VerticalOptions="Center">
+                </Label>
+            </StackLayout>
+            <AbsoluteLayout VerticalOptions="FillAndExpand">
+                <!-- 배경 화면 -->
+                <Image x:Name="background_image" Source="winter1.jpg"
+                           AbsoluteLayout.LayoutBounds="0,0,1920,1080" Opacity="1.0"
+                           Aspect="AspectFill"></Image>
+                <Image x:Name="fire_background_image" Source="person_fire1.png"
+                           AbsoluteLayout.LayoutBounds="920,670,350,250" Opacity="0.9"
+                           Aspect="AspectFill"></Image>
+                <Image x:Name="snow_image" Source="snows.png" AbsoluteLayout.LayoutBounds="0,0,1920,1080" Opacity="0.9"/>
+                <Image x:Name="star_image" Source="star2.png" Rotation="-10" AbsoluteLayout.LayoutBounds="-400,-200,1300,700" Opacity="1.0"/>
+                <!-- 디지털 시계 -->
+                <Label x:Name="digital_clock" AbsoluteLayout.LayoutBounds="800,400,700,100" Opacity="0.8"
+                            Text="00:00:00" Rotation="20" TextColor="#442698" FontSize="120" FontFamily="FaithFont" FontAttributes="Bold"></Label>
+                <!-- 아날로그 시계 -->
+                <AbsoluteLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Image x:Name="moon" Source="moon.png"
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand"
+                                       AbsoluteLayout.LayoutBounds="1350,200,200,200"
+                                       Opacity="0.5"></Image>
+                    <Image x:Name="rabbit" Source="rabbit.png"
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand"
+                                       AbsoluteLayout.LayoutBounds="1350,100,200,200"
+                                       Opacity="0.7"></Image>
+                    <BoxView x:Name="hour_hand" Color="Black" HeightRequest="35" WidthRequest="8"
+                                         ScaleY="-1" AnchorY="0" TranslationX="1450" TranslationY="300"/>
+                    <BoxView x:Name="min_hand" Color="#4F412B" HeightRequest="60" WidthRequest="8"
+                                         ScaleY="-1" AnchorY="0" TranslationX="1450" TranslationY="300"/>
+                    <BoxView x:Name="sec_hand" Color="Wheat" HeightRequest="85" WidthRequest="3"
+                                         ScaleY="-1" AnchorY="0" TranslationX="1450" TranslationY="300"/>
+                    <BoxView BackgroundColor="Gray" CornerRadius="100" AbsoluteLayout.LayoutBounds="1450,250,12,12"/>
+
+                </AbsoluteLayout>
+                <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,960,1920,80"
+                            BackgroundColor="#606060" Opacity="0.7">
+                    <!-- 날씨 정보 -->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Image Source="누리.png"
+                       WidthRequest="100" HeightRequest="60"
+                       HorizontalOptions="Start" VerticalOptions="Start"/>
+                        <Label x:Name ="date_label" Text=" " TextColor="Black" FontSize="30" 
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"
+                                   FontFamily="EliceFont" FontAttributes="Bold"></Label>
+                        <Label Text="  | 날씨 : " TextColor="WhiteSmoke" FontSize="30" 
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"
+                                   FontFamily="EliceFont" FontAttributes="Bold"></Label>
+                        <StackLayout x:Name="weather_info_layout" Orientation="Horizontal" Spacing="20">
+                            <Label x:Name="weather_data_label"  Text=" " TextColor="Black" FontSize="30" FontFamily="AppleFont" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                        <Label Text=" | 뉴스 : " TextColor="WhiteSmoke" FontSize="30" 
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"
+                                   FontFamily="EliceFont" FontAttributes="Bold"></Label>
+                        <StackLayout x:Name="news_info_layout" Orientation="Horizontal" Spacing="20">
+                            <Label x:Name="news_label"  Text=" " TextColor="Black" FontSize="30" FontFamily="AppleFont" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </AbsoluteLayout>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
