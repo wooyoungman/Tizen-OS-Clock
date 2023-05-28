@@ -2,4 +2,5 @@
  Analog and Digital Time Display Project
 
 
-![Uploading ezgif.com-video-to-gif (1).gif…]()
+
+![ezgif com-video-to-gif (1)](https://github.com/wooyoungman/Tizen-OS-Clock/assets/101693311/90ada685-ff67-4aa8-9da7-e137ef2b5542)
