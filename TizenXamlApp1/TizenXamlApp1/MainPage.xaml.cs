@@ -271,7 +271,7 @@ namespace TizenXamlApp1
         private async Task<List<string>> GetWeatherByLocationAsync()
         {
             // OpenWeatherMap API를 사용하기 위한 API 키 및 도시들의 정보 정의
-            string apiKey = "c62e681083cbe7b38584499ffbdc3437";
+            string apiKey = " Put your API Key ";
             string[] cities = { "Seoul", "Incheon", "Daegu", "Busan", "Daejeon", "Gwangju", "Cheongju" };
 
             List<string> weatherList = new List<string>();
